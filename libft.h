@@ -16,6 +16,13 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdbool.h>
+# include <stdarg.h>
+# include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 20
+# endif 
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *str, size_t n);
@@ -42,7 +49,7 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			*ft_strjoin(char const *s1, char const *s2);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-int				ft_strlen(const char *str);
+size_t	        ft_strlen(const char *str);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(char *str, char *to_find, size_t len);
@@ -51,5 +58,13 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
+char	        *get_next_line(int fd);
+int             ft_printf(const char *__format, ...);
+int	            prt_int(int n);
+int	            prt_hexa(unsigned int nbr, bool upper_case);
+int	            prt_str(char const *str);
+int	            prt_ptr(void *ptr_addr);
+int	            prt_unsigned(unsigned int nbr);
+bool	        is_onstr(const char *str, int ch);
 
 #endif

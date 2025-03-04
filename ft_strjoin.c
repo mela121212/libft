@@ -10,19 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <stdlib.h>*/
 #include "libft.h"
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
